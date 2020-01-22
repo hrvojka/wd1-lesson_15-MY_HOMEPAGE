@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDVgh_hWWsdtgKOcxHPx4FcP__dQ5cZVf_VY3J1ZZL6634sgYU_w&s");
+    background-size: 100% 105%;
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a{
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    padding: 1em 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.line{
+    width: 120px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    left: 250px;
+}
+
+a:nth-child(1):hover ~ .line {
+    transform: translate(-250px);
+    transition: all .4s ease-in-out;
+}
+
+a:nth-child(2):hover ~ .line {
+    transform: translate(-125px);
+    transition: all .4s ease-in-out;
+}
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 22px;
+    color: white;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0  1px 2px black;
+    transform: translateY(-100px);
+}
+
+.container .card .face.face2 p{
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    position: relative;
+    left: 50px;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: black;
+    color: #ffffff;
+}
+
